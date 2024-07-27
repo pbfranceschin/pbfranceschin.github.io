@@ -1,0 +1,97 @@
+.dashboardMobile {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, -0.881rem + 10.1587vw, 3.5rem);
+    width: 100%;
+    max-width: 610px;
+    padding-top: 48px;
+}
+
+.dashboardDesktop {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    width: 100%;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.5rem, -0.881rem + 10.1587vw, 3.5rem);
+    width: 100%;
+}
+
+.lastRow {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.button {
+    aspect-ratio: 150 / 130;
+    width: 150px;
+    background-color: #1e1e1e;
+    color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #a5a5a5;
+}
+
+@media (max-width: 374px) {
+    .button {
+        width: 125px;
+    }
+}
+
+
+.hiddenMobile {
+    display:none;
+}
+
+.hiddenTablet {
+    display: flex
+}
+
+@media (min-width: 690px) {
+    .hiddenMobile {
+        display:flex
+    }
+    .hiddenTablet {
+        display: none;
+    }
+    .lastRow {
+        display: none;
+    }
+    .dashboardMobile {
+        padding: 64px 0 0 0;
+        gap: clamp(3.5rem, 1.4706rem + 4.7059vw, 5rem);
+    }
+    .row {
+        gap: clamp(3.5rem, 1.4706rem + 4.7059vw, 5rem);
+    }
+}
+
+@media (min-width: 1280px) {
+    .button {
+        background-color: #d9d9d9;
+        color: #1e1e1e;
+    }
+    .button:hover {
+        background-color: #585858;
+        color: #d9d9d9;
+    }
+    .button:active {
+        color: #1e1e1e;
+    }
+    .lastRow {
+        display: flex;
+    }
+    .dashboardMobile {
+        display: none;
+    }
+}

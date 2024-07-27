@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+.passion-one {
+  font-family: "Passion One", sans-serif;
+  /* font-weight: 400; */
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-weight: 700;
+  font-size: 48px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-weight: 700;
+  font-size: 40px
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+f {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+main > div {
+  max-width: 1440px;
+  padding: 0px 24px 0px 24px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body > div {
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 744px) {
+  h1{
+    font-size: 64px;
   }
-  to {
-    transform: rotate(360deg);
+  h2 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 32px
+  }
+
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 72px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  h3 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 36px;
   }
 }

@@ -1,0 +1,23 @@
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 24px;
+}
+
+.social {
+    width: 32px;
+}
+
+@media (min-width: 744px) {
+    .social {
+        width: 36px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .social {
+        width: 48px;
+    }
+}
