@@ -1,0 +1,58 @@
+.bottomArrowsContainer {
+    display: flex;
+    gap: 16px;
+    justify-content: end;
+}
+.bottomArrows {
+    width: 32px;
+    height: 32px;
+    color: #d9d9d9;
+}
+
+.arrow {
+    color:#d9d9d9;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    cursor: pointer;
+}
+.arrow:hover {
+    background-color: #a5a5a5;
+}
+.arrow:active {
+    color: #1e1e1e;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.backArrowContainer {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.desktopHidden{
+
+}
+
+@media (min-width: 744px) {
+    .backArrowContainer {
+        right: 64px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .backArrowContainer {
+        display: none;
+    }
+    .desktopHidden{
+        display: none;
+    }
+}
