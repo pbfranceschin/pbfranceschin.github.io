@@ -1,11 +1,10 @@
 import './Hero.css';
 import { DashboardDesktop } from '../Dashboard/Dashboard';
 
-export default function Hero() {
+export default function Hero({ setPage }) {
 
     return (
         <div className='hero'>
-            {/* <div className='blackground'></div> */}
             <div className='image'>
                 <img 
                 alt='hero-art' 
@@ -15,7 +14,7 @@ export default function Hero() {
                 />
             </div>
             <div className='dashboardContainer'>
-                <DashboardDesktop />
+                <DashboardDesktop setPage={setPage} />
             </div>
             <div className='gradient'></div>
         </div>

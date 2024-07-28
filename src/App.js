@@ -2,13 +2,18 @@ import './App.css';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import { DashboardMobile } from './components/Dashboard/Dashboard';
+import About from './components/About/About';
+import { useState } from 'react';
 
 function App() {
+  const [page, setPage] = useState('home');
+  
   return (
     <>
-      <Hero />  
+      <Hero setPage={setPage} />  
       <main className='passion-one'>
-        <DashboardMobile/>
+        {page ==='home' && <DashboardMobile setPage={setPage}/>}
+        {page === 'about' && <About setPage={setPage}/>}
         <Footer/>
         <f>art by Stanislaw Szukalski.</f>
       </main> 

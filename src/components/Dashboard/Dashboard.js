@@ -2,12 +2,12 @@ import classNames from 'classnames';
 import './Dashboard.css';
 import { Info, Business, Portfolio, Projects, CV } from './Graphics';
 
-export function DashboardMobile() {
+export function DashboardMobile({ setPage }) {
 
     return (
         <div className='dashboardMobile'>
             <div className='row'>
-                <div className='button'><Info/></div>
+                <div className='button' onClick={() => setPage('about')}><Info/></div>
                 <div className='button'><Business/></div>
                 <div className={classNames('button', 'hiddenMobile')}>
                     <Portfolio/>
@@ -33,12 +33,12 @@ export function DashboardMobile() {
     )
 }
 
-export function DashboardDesktop() {
+export function DashboardDesktop({ setPage }) {
 
     return (
         <div className='dashboardDesktop'>
             <div className='row'>
-                <div className='button'><Info/></div>
+                <div className='button' onClick={() => setPage('about')}><Info/></div>
                 <div className='button'><Business/></div>            
             </div>
             <div className='row'>
