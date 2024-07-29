@@ -7,12 +7,12 @@ import Businesses from './components/Businesses/Businesses';
 import { useState } from 'react';
 
 function App() {
-  const [page, setPage] = useState('business');
+  const [page, setPage] = useState('home');
   
   return (
     <>
       <Hero setPage={setPage} />  
-      <main className='passion-one'>
+      <main id='main' className='passion-one'>
         {page ==='home' && <DashboardMobile setPage={setPage} />}
         {page === 'about' && <About setPage={setPage} />}
         {page === 'business' && <Businesses setPage={setPage} />}

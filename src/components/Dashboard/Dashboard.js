@@ -8,7 +8,7 @@ export function DashboardMobile({ setPage }) {
         <div className='dashboardMobile'>
             <div className='row'>
                 <div className='button' onClick={() => setPage('about')}><Info/></div>
-                <div className='button'><Business/></div>
+                <div className='button' onClick={() => setPage('business')}><Business/></div>
                 <div className={classNames('button', 'hiddenMobile')}>
                     <Portfolio/>
                 </div>
@@ -36,16 +36,18 @@ export function DashboardMobile({ setPage }) {
 export function DashboardDesktop({ setPage }) {
 
     const handleClick = (page) => {
-        let element;
         switch(page) {
             case 'about':
                 setPage('about');
-                element = document.getElementById("about");
+                break
+            case 'business':
+                setPage('business');
                 break
             default:
                 console.error(`wrong input value: ${page}` )
                 return
         }
+        const element = document.getElementById("main");
         const pos = element.getBoundingClientRect().top;
         setTimeout(() => {
             window.scrollTo({ top: pos, behavior:'smooth' });
