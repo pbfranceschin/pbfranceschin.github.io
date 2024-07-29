@@ -13,7 +13,7 @@ export default function Businesses({ setPage }) {
             <Australopitech />
         </div>
         <div style={{ display: 'flex', justifyContent: 'end' , width: '100%' }}>
-            <BottomArrows />
+            <BottomArrows setPage={setPage}/>
         </div>
         </>
     )
@@ -23,11 +23,11 @@ function Australopitech () {
 
     return (
         <div className='business'>
-            <div className='businessHeader'>
+            <div className='businessHeaderRight'>
                 <div className='apeLogo'>
                     <ApeLogo/>
                 </div>
-                <div className='frameLeft'>
+                <div className='frameRight'>
                     <h3>Australopitech</h3>
                     <div className='website'>
                         <div className='globeIcon'>
@@ -47,11 +47,11 @@ function Venn () {
 
     return (
         <div className='business'>
-            <div className='businessHeader'>
-                <div className='apeLogo'>
+            <div className='businessHeaderLeft'>
+                <div className='vennLogo'>
                     <VennLogo/>
                 </div>
-                <div className='frameRight'>
+                <div className='frameLeft'>
                     <h3>Venn Protocol</h3>
                     <div className='website'>
                         <div className='globeIcon'>
