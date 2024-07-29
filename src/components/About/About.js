@@ -5,7 +5,7 @@ import "./About.css";
 export default function About({ setPage }) {
 
     return (
-        <div className="about">
+        <div id="about" className="about">
             <Heading title={'About'} setPage={setPage}/>
             <div className="blackBox">
                 <p>
