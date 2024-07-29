@@ -72,6 +72,9 @@
     width: 120px;
     flex-shrink: 0;
 }
+.label {
+    color: #585858;
+}
 
 @media (min-width: 580px) {
     .frameLeft,

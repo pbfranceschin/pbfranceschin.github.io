@@ -38,7 +38,7 @@ function Australopitech () {
                 </div>
             </div>
             <p>Web3 development, dapp design, blockchain solutions and consulting.</p>
-            <p>Role: Co-owner, full-stack developer, protocol designer and smart contract engineer.</p>
+            <p><span className='label'>Role:</span> Co-owner, full-stack developer, protocol designer and smart contract engineer.</p>
         </div>
     )
 }
@@ -62,7 +62,7 @@ function Venn () {
                 </div>
             </div>
             <p>Startup, focused on a new NFT rental solution.</p>
-            <p>Role: Co-founder, full-stack developer, protocol designer and smart contract engineer.</p>
+            <p><span className='label'>Role:</span> Co-founder, full-stack developer, protocol designer and smart contract engineer.</p>
         </div>
     )
 }
