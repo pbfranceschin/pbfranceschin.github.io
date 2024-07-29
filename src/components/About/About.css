@@ -1,7 +1,7 @@
 .about {
     display: flex;
     flex-direction: column;
-    /* gap: 48px; */
+    gap: 24px;
     text-align: center;
     padding: 0;
 }
@@ -32,6 +32,9 @@ p {
 }
 
 @media(min-width: 744px) {
+    .about {
+        gap: 48px
+    }
     .blackBox {
         padding-block: 64px ;
     }
@@ -54,6 +57,9 @@ p {
 }
 
 @media(min-width: 1280px) {
+    .about {
+        gap: 64px;
+    }
     .blackBox {
         padding-block: 80px ;
     }
