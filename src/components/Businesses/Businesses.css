@@ -1,0 +1,70 @@
+.page {
+    padding: 0;
+    padding-top: 80px;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.business {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+/* .business > div {
+    padding: 0 24px 0 24px;
+} */
+.business > p {
+    margin: 0;
+    padding: 0 24px 0 24px;
+}
+
+.businessHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.frameRight,
+.frameLeft {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 24px;
+}
+.frameRight {
+    background-image: url('/public/img/Frame-right.svg');
+    background-position-x: right;
+}
+.frameLeft {
+    background-image: url('/public/img/Frame-left.svg');
+    background-position-x: left;
+}
+.website {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.website > p:hover {
+    text-decoration: underline;
+}
+.website > p:active {
+    color: #a5a5a5;
+}
+.globeIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.apeLogo {
+    width: 150px;
+}
+.vennLogo {
+    width: 120px;
+}
