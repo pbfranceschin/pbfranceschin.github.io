@@ -17,7 +17,7 @@ function App() {
         {page === 'about' && <About setPage={setPage} />}
         {page === 'business' && <Businesses setPage={setPage} />}
         <Footer/>
-        <f>art by Stanislaw Szukalski.</f>
+        <span className='footnote'>art by Stanislaw Szukalski.</span>
       </main> 
     </>
   );
