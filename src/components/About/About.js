@@ -43,7 +43,7 @@ export default function About({ setPage }) {
                 <br/>
                 He has always had an entrepreneurial vein, having opened his first business at the young age of 23 in a non tech sector (namely food and beverages), before realizing his true calling was helping develop awesome technology. He also worked for while as an academic researcher focused on blockchain technology after he graduated as a Master of Arts in Applied Economics in Universidade de São Paulo, having written his dissertation on Blockchain protocols.
             </p>
-            <BottomArrows/>
+            <BottomArrows setPage={setPage}/>
         </div>
     )
 }
