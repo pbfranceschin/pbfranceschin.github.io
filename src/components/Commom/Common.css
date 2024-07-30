@@ -22,19 +22,22 @@
 .arrow:active {
     color: #1e1e1e;
 }
+.headingContainer {
+    width: 100%;
+    padding: 0 24px 48px 24px;
+}
 
 .heading {
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
-    padding-bottom: 48px;
 }
 .backArrowContainer {
     width: 48px;
     height: 48px;
     position: absolute;
-    right: 24px;
+    right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -43,14 +46,28 @@
 
 }
 
-@media (min-width: 744px) {
+@media (max-width: 374px) {
+    h1 {
+        font-size: 40px;
+    }
     .backArrowContainer {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (min-width: 744px) {
+    /* .backArrowContainer {
         right: 64px;
+    } */
+    .headingContainer {
+        padding-left: 64px ;
+        padding-right: 64px;
     }
 }
 
 @media (min-width: 1280px) {
-    .heading {
+    .headingContainer {
         padding-bottom: 64px;
     }
     .backArrowContainer {
