@@ -28,6 +28,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    padding-bottom: 48px;
 }
 .backArrowContainer {
     width: 48px;
@@ -49,6 +50,9 @@
 }
 
 @media (min-width: 1280px) {
+    .heading {
+        padding-bottom: 64px;
+    }
     .backArrowContainer {
         display: none;
     }

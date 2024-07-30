@@ -1,6 +1,6 @@
 import './Businesses.css';
 import Heading from '../Commom/Heading';
-import { ApeLogo, GlobeIcon, VennLogo } from './Graphics';
+import { ApeLogo, GlobeIcon, VennLogo } from '../Commom/Graphics';
 import { BottomArrows } from '../Commom/BottomArrows';
 
 export default function Businesses({ setPage }) {

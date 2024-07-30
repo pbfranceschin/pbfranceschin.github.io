@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 import { DashboardMobile } from './components/Dashboard/Dashboard';
 import About from './components/About/About';
 import Businesses from './components/Businesses/Businesses';
+import Portfolio from './components/Portfolio/Portfolio';
 import { useState } from 'react';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         {page ==='home' && <DashboardMobile setPage={setPage} />}
         {page === 'about' && <About setPage={setPage} />}
         {page === 'business' && <Businesses setPage={setPage} />}
+        {page === 'portfolio' && <Portfolio setPage={setPage} />}
         <Footer/>
         <span className='footnote'>art by Stanislaw Szukalski.</span>
       </main> 

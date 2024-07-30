@@ -1,0 +1,103 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 48px;
+    gap: 32px;
+}
+@media (min-width: 744px) {
+    .page {
+        gap: 36px;
+        padding-bottom: 64px;
+    }
+}
+@media (min-width: 1280px) {
+    .page {
+        gap: 48px;
+        padding-bottom: 80px;
+    }
+}
+
+.portfolioHeaderRight,
+.portfolioHeaderLeft {
+    background-size: 70%;
+    background-repeat: no-repeat;
+    color: #d9d9d9;
+    padding: 16px 24px 16px 24px;
+}
+.portfolioHeaderLeft {
+    background-image: url('/public/img/frame-left-portfolio.svg');
+    background-position-x: left ;
+    background-position-y:center;
+}
+.portfolioHeaderRight {
+    background-image: url('/public/img/frame-right-portfolio.svg');
+    background-position-x: right ;
+    background-position-y:center;
+}
+@media (min-width: 500px) {
+    .portfolioHeaderLeft,
+    .portfolioHeaderRight {
+        background-size: 50%;
+    }
+}
+@media (min-width: 744px) {
+    .portfolioHeaderLeft,
+    .portfolioHeaderRight {
+        padding: 16px 64px 16px 64px;
+    }
+}
+@media (min-width: 900px) {
+    .portfolioHeaderLeft,
+    .portfolioHeaderRight {
+        background-size: 40%;
+    }
+}
+@media (min-width: 1280px) {
+    .portfolioHeaderLeft,
+    .portfolioHeaderRight {
+        padding: 16px 80px 16px 80px;
+        display: flex;
+        justify-content: center;
+        background-position-x: center;
+        background-image: url('/public/img/frame-desktop-portfolio.svg');
+    }
+}
+.website {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    cursor: pointer;
+}
+.website > h3:hover {
+    text-decoration: underline;
+}
+.website > h3:active {
+    color: #a5a5a5;
+}
+.globeIcon {
+    width: 32px;
+    height: 32px;
+}
+.label {
+    color: #585858;
+}
+.link {
+    color: #a5a5a5;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 744px) {
+    .globeIcon {
+        height: 36px;
+        width: 36px;
+    }
+}
+@media (min-width: 1280px) {
+    .globeIcon {
+        height: 40px;
+        width: 40px;
+    }
+}

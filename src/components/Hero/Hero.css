@@ -89,7 +89,7 @@
 @media (min-width: 1280px) {
     .hero {
         display: flex;
-        margin-bottom: 160px;
+        margin-bottom: 80px;
     }
     .dashboardContainer {
         display: flex;
