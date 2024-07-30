@@ -14,10 +14,14 @@ export function DashboardMobile({ setPage }) {
                 </div>
             </div>
             <div className='row'>
-                <div className={classNames('button', 'hiddenTablet')}>
+                <div className={classNames('button', 'hiddenTablet')}
+                onClick={() => setPage('portfolio')}
+                >
                     <Portfolio/>
                 </div>
-                <div className='button'>
+                <div className='button'
+                onClick={() => setPage('projects')}
+                >
                     <Projects/>
                 </div>
                 <div className={classNames('button', 'hiddenMobile')}>
@@ -46,6 +50,9 @@ export function DashboardDesktop({ setPage }) {
             case 'portfolio':
                 setPage('portfolio');
                 break
+            case 'projects':
+                setPage('projects');
+                break
             default:
                 console.error(`wrong input value: ${page}` )
                 return
@@ -65,7 +72,7 @@ export function DashboardDesktop({ setPage }) {
             </div>
             <div className='row'>
                 <div className='button' onClick={() => handleClick('portfolio')}><Portfolio/></div>
-                <div className='button'><Projects/></div>
+                <div className='button' onClick={() => handleClick('projects')}><Projects/></div>
             </div>
             <div className='lastRow'>
                 <div className='button'><CV/></div>
