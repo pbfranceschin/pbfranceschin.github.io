@@ -8,7 +8,7 @@ export default function Businesses({ setPage }) {
     return (
         <>
         <Heading title={'Businesses'} setPage={setPage} />
-        <div className='page'>
+        <div className='businessPage'>
             <Venn />
             <Australopitech />
         </div>
