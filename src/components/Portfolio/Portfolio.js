@@ -7,7 +7,7 @@ export default function Portfolio(setPage) {
     return (
         <>
         <Heading title={'Portfolio'} setPage={setPage} />
-        <div className='page'>
+        <div className='portfolioPage'>
             <div className='portfolioHeaderLeft'>
                 <div className='website'>
                     <div className='globeIcon'>

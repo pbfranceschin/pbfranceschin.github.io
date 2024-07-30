@@ -1,4 +1,4 @@
-.page {
+.portfolioPage {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -6,13 +6,13 @@
     gap: 32px;
 }
 @media (min-width: 744px) {
-    .page {
+    .portfolioPage {
         gap: 36px;
         padding-bottom: 64px;
     }
 }
 @media (min-width: 1280px) {
-    .page {
+    .portfolioPage {
         gap: 48px;
         padding-bottom: 80px;
     }
