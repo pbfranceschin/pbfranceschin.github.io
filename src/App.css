@@ -6,25 +6,25 @@
 
 h1 {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   margin: 0;
 }
 
 h2 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 36px;
   margin: 0;
 }
 
 h3 {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   margin: 0;
 }
 
 p {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
 }
 
@@ -55,17 +55,17 @@ body > div {
 
 @media (min-width: 744px) {
   h1{
-    font-size: 64px;
-  }
-  h2 {
     font-size: 48px;
   }
-  h3 {
+  h2 {
     font-size: 40px;
+  }
+  h3 {
+    font-size: 36px;
   }
 
   p {
-    font-size: 32px
+    font-size: 24px
   }
 
   .footnote {
@@ -80,16 +80,16 @@ body > div {
 
 @media (min-width: 1280px) {
   h1 {
-    font-size: 72px;
-  }
-  h2 {
     font-size: 64px;
   }
-  h3 {
+  h2 {
     font-size: 48px;
   }
+  h3 {
+    font-size: 40px;
+  }
   p {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .footnote {
