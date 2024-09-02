@@ -97,6 +97,15 @@ body > div {
 
 }
 
+@media(min-width: 1024px) {
+  .leftAlign {
+    padding-left: 64px;
+  }
+  .rightAlign {
+    padding-right: 64px;
+  }
+}
+
 @media (min-width: 1280px) {
   .leftAlign {
     padding-left: 80px;
