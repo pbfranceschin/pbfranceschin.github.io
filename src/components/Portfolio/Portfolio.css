@@ -7,13 +7,13 @@
 }
 @media (min-width: 744px) {
     .portfolioPage {
-        gap: 36px;
+        gap: 64px;
         padding-bottom: 64px;
     }
 }
 @media (min-width: 1280px) {
     .portfolioPage {
-        gap: 48px;
+        gap: 80px;
         padding-bottom: 80px;
     }
 }
@@ -25,34 +25,57 @@
     width: 100%;
     /* box-sizing: border-box; */
 }
+.website,
 .portfolioEntry > p {
     padding-inline: 24px;
 }
 
-.portfolioHeaderRight,
-.portfolioHeaderLeft {
+.headerContainer {
+    display: flex;
+    width: 100%;
+}
+.headerAlignRight {
+    justify-content: end;
+}
+
+.portfolioHeader {
+    position: relative;
     background-size: 70%;
     background-repeat: no-repeat;
     color: #d9d9d9;
     padding: 16px 24px 16px 24px;
+    background-color: #585858;
 }
-.portfolioHeaderLeft {
-    background-image: url('/public/img/frame-left-portfolio.svg');
-    background-position-x: left ;
-    background-position-y:center;
+.headerTailLeft {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.portfolioHeaderRight {
-    background-image: url('/public/img/frame-right-portfolio.svg');
-    background-position-x: right ;
-    background-position-y:center;
+.headerTailRight {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
-@media (min-width: 500px) {
+.mobileHidden {
+    display: none;
+}
+.tabletHidden {
+    display: none;
+}
+/* @media (min-width: 500px) {
     .portfolioHeaderLeft,
     .portfolioHeaderRight {
         background-size: 50%;
     }
-}
+} */
 @media (min-width: 744px) {
+    .mobileHidden{
+        display: block;
+    }
     .portfolioHeaderLeft,
     .portfolioHeaderRight {
         padding: 16px 64px 16px 64px;
@@ -60,17 +83,22 @@
     .portfolioEntry {
         gap: 36px;
     }
+    .website,
     .portfolioEntry > p {
         padding-inline: 64px;
     }
 }
-@media (min-width: 900px) {
-    .portfolioHeaderLeft,
-    .portfolioHeaderRight {
-        background-size: 40%;
+@media (min-width: 1024px) {
+    .tabletHidden {
+        display: block;
+    }
+    .headerAlignRight,
+    .headerContainer {
+        justify-content: center;
     }
 }
 @media (min-width: 1280px) {
+    
     .portfolioHeaderLeft,
     .portfolioHeaderRight {
         padding: 16px 80px 16px 80px;
@@ -82,9 +110,37 @@
     .portfolioEntry {
         gap: 48px;
     }
+    .website,
     .portfolioEntry > p {
         padding-inline: 80px;
     }
+}
+.name {
+    text-wrap: nowrap;
+    max-width: 75vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nameLeft {
+    padding-right: 20px;
+}
+.nameRight {
+    padding-left: 20px;
+}
+@media (min-width: 1024px) {
+    .nameLeft,
+    .nameRight {
+        padding: 0px 20px;
+    }
+}
+
+.outlinedText {
+    /* color: white; */
+    text-shadow:
+      -2px -2px 0 #585858,
+      2px -2px 0 #585858,
+      -2px 2px 0 #585858,
+      2px 2px 0 #585858;
 }
 .website {
     display: flex;
@@ -92,10 +148,14 @@
     align-items: center;
     cursor: pointer;
 }
-.website > h3:hover {
+.website > a {
+    text-decoration: none;
+    color: inherit;
+}
+.website > a:hover {
     text-decoration: underline;
 }
-.website > h3:active {
+.website > a:active {
     color: #a5a5a5;
 }
 .globeIcon {
