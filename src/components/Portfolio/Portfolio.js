@@ -37,7 +37,7 @@ export default function Portfolio({ setPage }) {
             about={content.venn.about}
             role={content.venn.role}
             activities={content.venn.activities}
-            note={<p>Project by Venn. Credit for the idea goes to <a href='https://x.com/bfranceschin1' target='_blank' className='link'>@bfranceschin</a>.</p>}
+            note={<p className={classNames('leftAlign', 'rightAlign')}>Project by Venn. Credit for the idea goes to <a href='https://x.com/bfranceschin1' target='_blank' className='link'>@bfranceschin</a>.</p>}
             side={'left'}
             />
             <PortfolioEntry
@@ -46,10 +46,12 @@ export default function Portfolio({ setPage }) {
             about={content.desmatamento.about}
             role={content.desmatamento.role}
             activities={content.desmatamento.activities}
-            note={<p>Worked alongside Venn team for the Conservation Strategy Fund.</p>}
+            note={<p className={classNames('leftAlign', 'rightAlign')}>Worked alongside Venn team for the Conservation Strategy Fund.</p>}
             side={'right'}
             />
-            <BottomArrows setPage={setPage} />
+            <div className={classNames('leftAlign', 'rightAlign')}>
+                <BottomArrows setPage={setPage} />
+            </div>
         </div>
         
         </>
@@ -69,7 +71,7 @@ const PortfolioEntry = ({
     return (
         <div className='portfolioEntry'>
             <div className={classNames('headerContainer', side === 'right' ? 'headerAlignRight' : '')}>
-                <div className='portfolioHeader'>
+                <div className={classNames('portfolioHeader', 'leftAlign', 'rightAlign')}>
                     <img className={classNames('headerTailLeft', side === 'left' ? 'tabletHidden' : '')} width='100%' height='100%' src='img/headerTail-left-side-convex.svg' alt='headerTail_left' />
                     <h3 
                     className={classNames('name', name.length > 20 ? 'h3small' : '', side === 'right' ? 'nameRight' : 'nameLeft')}
@@ -78,19 +80,19 @@ const PortfolioEntry = ({
                     <img className={classNames('headerTailRight', side === 'right' ? 'tabletHidden' : '' )} width='100%' height='100%' src='img/headerTail-right-side-convex.svg' alt='headerTail_right' />
                 </div>
             </div>
-            <div className='website'>
+            <div className={classNames('website', 'leftAlign', 'rightAlign')}>
                 <div className='globeIcon'>
                     <GlobeIcon/>
                 </div>
                 <a href={website}>{website.slice(8)}</a>
             </div>
-            <p>
+            <p className={classNames('leftAlign', 'rightAlign')}>
                 <span className='label'>About: </span>{about} 
             </p>
-            <p>
+            <p className={classNames('leftAlign', 'rightAlign')}>
                 <span className='label'>Role: </span>{role}
             </p>
-            <p>
+            <p className={classNames('leftAlign', 'rightAlign')}>
                 <span className='label'>Activities: </span>{activities}
             </p>
             {note}

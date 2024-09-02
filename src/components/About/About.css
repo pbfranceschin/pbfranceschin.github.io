@@ -42,11 +42,11 @@
         font-size: 36px;
     }
     .about > div {
-        padding-left: 64px;
-        padding-right: 64px;
+        padding-left: 48px;
+        padding-right: 48px;
     }
     .about > p {
-        margin-inline: 64px;
+        margin-inline: 48px;
     }
 }
 
