@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     padding: 0;
+    gap: 48px;
 }
 
 .project {
@@ -11,25 +12,33 @@
     gap: 24px;
 }
 .project > p {
-    padding: 0 24px 0 24px;
+    /* padding: 0 24px 0 24px; */
     text-align: justify;
 }
 
 @media (min-width: 744px) {
+    .projectsPage {
+        gap: 64px;
+    }
     .project {
         gap: 32px;
     }
-    .project > p {
+    /* .project > p {
         padding-inline: 64px;
+    } */
+}
+@media (min-width: 1024px) {
+    .projectsPage {
+        gap: 80px;
     }
 }
 @media (min-width: 1280px) {
     .project {
         gap: 48px;
     }
-    .project > p {
+    /* .project > p {
         padding-inline: 64px;
-    }
+    } */
 }
 
 
@@ -78,7 +87,7 @@
 }
 
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .projectHeaderLeft,
     .projectHeaderRight {
         padding-inline: 80px;
