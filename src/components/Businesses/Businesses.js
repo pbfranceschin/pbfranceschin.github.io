@@ -9,8 +9,9 @@ export default function Businesses({ setPage }) {
         <>
         <Heading title={'Businesses'} setPage={setPage} />
         <div className='businessPage'>
-            <Venn />
-            <Australopitech />
+            {/* <Venn />
+            <Australopitech /> */}
+            soon...
         </div>
         <div style={{ display: 'flex', justifyContent: 'end' , width: '100%' }}>
             <BottomArrows setPage={setPage}/>
