@@ -29,9 +29,11 @@ export function DashboardMobile({ setPage }) {
                 </div>
             </div>
             <div className='lastRow'>
-                <div className='button'>
-                    <a href='https://github.com/pbfranceschin/pbfranceschin.github.io/blob/master/files/cv.pdf' target='_blank'><CV/></a>
-                </div>
+                <a href='/cv.pdf' download>
+                    <div className='button'>
+                        <CV/>
+                    </div>
+                </a>
             </div>
         </div>
     )
@@ -75,7 +77,9 @@ export function DashboardDesktop({ setPage }) {
                 <div className='button' onClick={() => handleClick('projects')}><Projects/></div>
             </div>
             <div className='lastRow'>
-                <div className='button'><CV/></div>
+                <a href='/cv.pdf' download>
+                    <div className='button'><CV/></div>
+                </a>
             </div>
         </div>
     )
