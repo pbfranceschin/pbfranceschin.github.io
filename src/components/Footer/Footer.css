@@ -7,18 +7,21 @@
 }
 
 .social {
-    width: 32px;
+    width: 24px;
 }
 
 @media (min-width: 744px) {
+    .footer {
+        padding-top: 100px;
+    }
     .social {
-        width: 36px;
+        width: 28px;
     }
 }
 
 @media (min-width: 1280px) {
     .social {
-        width: 48px;
+        width: 32px;
     }
     .footer {
         padding-top: 160px;
