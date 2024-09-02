@@ -26,9 +26,9 @@
     /* box-sizing: border-box; */
 }
 /* .website, */
-/* .portfolioEntry > p {
-    padding-inline: 24px;
-} */
+.portfolioEntry > p {
+    text-align: justify;
+}
 
 .headerContainer {
     display: flex;
