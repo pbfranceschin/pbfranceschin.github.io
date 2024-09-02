@@ -30,7 +30,7 @@ export function DashboardMobile({ setPage }) {
             </div>
             <div className='lastRow'>
                 <div className='button'>
-                    <CV/>
+                    <a href='../../files/cv.pdf'><CV/></a>
                 </div>
             </div>
         </div>
