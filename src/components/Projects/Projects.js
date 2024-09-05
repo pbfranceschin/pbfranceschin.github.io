@@ -14,7 +14,7 @@ export default function Projects({ setPage }) {
                     <div className='projectHeaderLeft'>
                         <img className='projectHeaderTailRight' src='img/projects-headerTail-rightside-down.svg' alt='header_tail'/>
                         <img className={classNames('projectHeaderTailLeft', 'hiddenUpTo800')} src='img/projects-headerTail-leftside-up.svg' alt='header_tail' />
-                        <h3>venn protocol</h3>
+                        <h3 className='nameLeft'>venn protocol</h3>
                     </div>
                 </div>
                 <p className={classNames('leftAlign', 'rightAlign')}><span className='label'>About:</span> using Venn Smart Accounts and Venn Marketplace users can rent NFT's without collateral in a completely safe and trustless manner. Venn Protocol leverages Account Abstraction and ERC-4337, in a innovative approach to NFT rental scolutions.</p>
@@ -27,7 +27,7 @@ export default function Projects({ setPage }) {
                     <div className='projectHeaderRight'>
                         <img className='projectHeaderTailLeft' src='img/projects-headerTail-leftside-down.svg' alt='header_tail'/>
                         <img className={classNames('projectHeaderTailRight', 'hiddenUpTo800')} src='img/projects-headerTail-rightside-up.svg' alt='header_tail' />
-                        <h3>graphia</h3>
+                        <h3 className='nameRight'>graphia</h3>
                     </div>
                 </div>
                 <p className={classNames('leftAlign', 'rightAlign')}><span className='label'>About:</span> protocol that leverages blockchain to enable automatic and recursive funding distribution based on a cross-reference tree. The main cases being studied right now are ‘open source software’ (possibly including package manager and github integration), publishing (scientific and otherwise) and music streaming. The core concept is that instances of work that receive funding can share the funding, in a programmatic fashion, with other works that had relevant contribution.</p>
