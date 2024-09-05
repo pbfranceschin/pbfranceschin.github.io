@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    padding-top: 24px;
 }
 .project > p {
     /* padding: 0 24px 0 24px; */
@@ -21,6 +22,7 @@
         gap: 64px;
     }
     .project {
+        padding-top: 32px;
         gap: 32px;
     }
     /* .project > p {
@@ -35,41 +37,82 @@
 @media (min-width: 1280px) {
     .project {
         gap: 48px;
+        padding-top: 48px;
     }
     /* .project > p {
         padding-inline: 64px;
     } */
 }
-
-
+.projectHeaderContainerLeft {
+    width: 100%;
+    padding-right: 24px;
+    box-sizing: border-box;
+    display: flex;
+}
+.projectHeaderContainerRight {
+    width: 100%;
+    padding-left: 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+}
 .projectHeaderLeft,
 .projectHeaderRight {
     width: 100%;
     padding: 16px 24px 16px 24px;
     box-sizing: border-box;
-    background-size: 70%;    
-    background-position-y: center;
-    background-repeat: no-repeat;
+    background-color: #a5a5a5;
+    position: relative;
+    max-width: 360px;
 }
-.projectHeaderLeft {
-    background-image: url('/public/img/frame-projects-left.svg');
-    background-position-x: left;
-}
+/* .projectHeaderLeft {
+    margin-right: 32px;
+} */
 .projectHeaderRight {
-    background-image: url('/public/img/frame-projects-right.svg');
-    background-position-x: right;
+    /* margin-left: 32px; */
     text-align: right;
 }
+.projectHeaderTailLeft,
+.projectHeaderTailRight {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: auto;
+}
+.projectHeaderTailLeft {
+    left: 0;
+}
+.projectHeaderTailRight {
+    right: 0;
+}
+
+.hiddenUpTo800 {
+    display: none;
+}
+@media(min-width: 800px) {
+    .hiddenUpTo800 {
+        display: block;
+    }
+    .projectHeaderContainerLeft,
+    .projectHeaderContainerRight {
+        justify-content: center;
+    }
+    .projectHeaderLeft,
+    .projectHeaderRight {
+        text-align: center;
+    }
+}
+
 .label {
     color: #585858
 }
 
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
     .projectHeaderLeft,
     .projectHeaderRight {
         background-size: 50%;
     }
-}
+} */
 
 
 @media (min-width: 744px) {
@@ -90,15 +133,6 @@
 @media (min-width: 1024px) {
     .projectHeaderLeft,
     .projectHeaderRight {
-        padding-inline: 80px;
-        display: flex;
-        justify-content: center;
-        background-position-x: center;
-    }
-    .projectHeaderLeft {
-        background-image: url('/public/img/frame-desktop-projects-left.svg');
-    }
-    .projectHeaderRight {
-        background-image: url('/public/img/frame-desktop-projects-right.svg');
+        max-width: 500px;
     }
 }
