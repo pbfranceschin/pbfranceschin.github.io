@@ -52,9 +52,11 @@ function Venn () {
                 <div className='vennLogo'>
                     <VennLogo/>
                 </div>
-                <div className='headerLeft'>
-                    <img className='tailLeft' src='img/business-headerTail-rightside.svg' alt='header_tail'/>
-                    <h3>Venn Protocol</h3>                                        
+                <div className='headerContainerLeft'>
+                    <div className='headerLeft'>
+                        <img className='businessTailRight' src='img/business-headerTail-rightside.svg' alt='header_tail'/>
+                        <h3>Venn Protocol</h3>                                        
+                    </div>
                 </div>
             </div>
             <div className='content'>
