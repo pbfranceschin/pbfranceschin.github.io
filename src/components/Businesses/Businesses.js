@@ -55,7 +55,7 @@ function Venn () {
                 <div className='businessHeaderContainerLeft'>
                     <div className='businessHeaderLeft'>
                         <img className='businessTailRight' src='img/business-headerTail-rightside.svg' alt='header_tail'/>
-                        <h3>Venn Protocol</h3>                                        
+                        <h3>Venn Studio</h3>                                        
                     </div>
                 </div>
             </div>
