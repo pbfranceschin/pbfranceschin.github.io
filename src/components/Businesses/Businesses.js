@@ -2,6 +2,7 @@ import './Businesses.css';
 import Heading from '../Commom/Heading';
 import { ApeLogo, GlobeIcon, VennLogo } from '../Commom/Graphics';
 import { BottomArrows } from '../Commom/BottomArrows';
+import classNames from 'classnames';
 
 export default function Businesses({ setPage }) {
     
@@ -9,9 +10,8 @@ export default function Businesses({ setPage }) {
         <>
         <Heading title={'Businesses'} setPage={setPage} />
         <div className='businessPage'>
-            {/* <Venn />
-            <Australopitech /> */}
-            soon...
+            <Venn />
+            {/* soon... */}
         </div>
         <div style={{ display: 'flex', justifyContent: 'end' , width: '100%' }}>
             <BottomArrows setPage={setPage}/>
@@ -48,22 +48,29 @@ function Venn () {
 
     return (
         <div className='business'>
-            <div className='businessHeaderLeft'>
+            <div className='bannerLeft'>
                 <div className='vennLogo'>
                     <VennLogo/>
                 </div>
-                <div className='frameLeft'>
-                    <h3>Venn Protocol</h3>
-                    <div className='website'>
-                        <div className='globeIcon'>
-                            <GlobeIcon/>
-                        </div>
-                        <p style={{ margin: 0 }}>venn.xyz</p>
-                    </div>
+                <div className='headerLeft'>
+                    <img className='tailLeft' src='img/business-headerTail-rightside.svg' alt='header_tail'/>
+                    <h3>Venn Protocol</h3>                                        
                 </div>
             </div>
-            <p>Startup, focused on a new NFT rental solution.</p>
-            <p><span className='label'>Role:</span> Co-founder, full-stack developer, protocol designer and smart contract engineer.</p>
+            <div className='content'>
+                {/* <div className={classNames('line', 'hiddenLg')}></div> */}
+                <p>Tech startup focused on web(3) applications, smart contract protocols, decentralized applications.</p>
+                <p><span className='label'>Role:</span> Co-founder, engineer, full-stack developer.</p>
+                <div className='website'>
+                    <div className='globeIcon'>
+                        <GlobeIcon/>
+                    </div>
+                    <p style={{ margin: 0 }}>vennstudio.dev</p>
+                </div>
+                <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+                    <div className='line'></div>
+                </div>
+            </div>
         </div>
     )
 }

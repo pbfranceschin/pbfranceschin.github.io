@@ -4,6 +4,7 @@
     padding-bottom: 64px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 80px;
     width: 100%;
 }
@@ -12,42 +13,66 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width: 100%;
+    max-width: 560px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 0px 24px;
+    box-sizing: border-box;
 }
 /* .business > div {
     padding: 0 24px 0 24px;
 } */
+/* .website,
 .business > p {
     margin: 0;
     padding: 0 24px 0 24px;
-}
-.businessHeaderRight,
-.businessHeaderLeft {
+} */
+.bannerRight,
+.bannerLeft {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
 }
-.frameRight,
-.frameLeft {
+.headerRight,
+.headerLeft {
     width: 100%;
-    background-size: contain;
+    /* background-size: contain;
     background-repeat: no-repeat;
-    background-position-y: center ;
+    background-position-y: center ; */
     color: #d9d9d9;
+    background-color: #000000;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
-    padding-block: 24px;
+    padding: 24px;
+    position: relative;
+    box-sizing: border-box;
 }
-.frameRight {
+.headerLeft {
+    margin-right: 32px;
+}
+.tailLeft {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+}
+/* .headerRight {
     background-image: url('/public/img/Frame-right.svg');
     background-position-x: right
 }
-.frameLeft {
+.headerLeft {
     background-image: url('/public/img/Frame-left.svg');
     background-position-x: left;
-}
+} */
 .website {
     display: flex;
     gap: 4px;
@@ -77,10 +102,28 @@
     color: #585858;
 }
 
-@media (min-width: 580px) {
-    .frameLeft,
-    .frameRight {
-        background-size: 90%;
+.line {
+    height: 1px;
+    width: 50vw;
+    max-width: 500px;
+    background-color: #000000;
+    margin: 16px;
+}
+
+.hiddenLg {
+    display: none;
+}
+@media(min-width: 1280px) {
+    .hiddenLg {
+        display: block;
+    }
+}
+
+@media (max-width: 360px) {
+    .headerLeft,
+    .headerRight {
+        padding: 16px 24px;
+        /* justify-content: start; */
     }
 }
 
@@ -93,64 +136,71 @@
     .business {
         gap: 32px;
     }
-    .businessHeaderLeft,
-    .businessHeaderRight {
+    .bannerLeft,
+    .bannerRight {
         gap: 32px;
+        align-items: end;
     }
-    .business > p {
-        padding: 0 64px 0 64px;
-    }
-    .apeLogo {
-        width: 250px;
-        /* padding-left: 64px; */
-        
+    .content {
+        gap: 32px;
+        padding: 0 48px 0 48px;
     }
     .vennLogo {
-        width: 200px;
-        /* padding-right: 64px */
+        width: 25%;
     }
-}
-
-@media (min-width: 1024px) {
-    .businessHeaderRight,
-    .businessHeaderLeft {
+    .bannerRight,
+    .bannerLeft {
         flex-direction: row-reverse;
         width: 100%;
         flex-grow: 1;
-        gap: 0;
+        gap: 24px;
     }
-    .businessHeaderRight {
+    .bannerRight {
         flex-direction: row;
     }
-    .apeLogo {
-        padding-left: 64px;
-        /* width: 150px; */
-    }
-    .vennLogo {
-        padding-right: 64px;
-    }
-    .frameLeft,
-    .frameRight {
+    .headerLeft,
+    .headerRight {
         flex-grow: 1;
         width: auto;
+        padding: 24px 48px;
+    }
+    .headerLeft {
+        justify-content: start;
+        margin-right: 0px;
     }
 }
+ @media (min-width: 1024px) {
+    .business {
+        max-width: 800px;
+    }
+    .bannerLeft,
+    .bannerRight {
+        gap: 48px;
+    }
+    .headerLeft,
+    .headerRight{
+        padding: 24px 64px;
+    }
+    .content {
+        padding: 0px 64px;
+    }
+ }
 
 @media (min-width: 1280px) {
-    .apeLogo {
-        padding-left: 80px;
-        width: 320px;
+    /* .vennLogo {
+        width: 20%;
+    } */
+    .content {
+        gap: 48px;
+        padding: 0px 80px;
     }
-    .vennLogo {
-        padding-right: 80px;
-        width: 256px;
-    }
-    .business {
-        gap: 48px
-    }
+    /* .website,
     .business > p {
         padding: 0 80px 0 80px;
-        text-align: center;
+    } */
+    .headerLeft,
+    .headerRight {
+        padding: 24px 80px;
     }
     .businessPage{
         /* padding-top: 160px; */
