@@ -21,8 +21,9 @@
 .portfolioEntry {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     width: 100%;
+    padding-top: 24px ;
     /* box-sizing: border-box; */
 }
 /* .website, */
@@ -82,7 +83,8 @@
         padding: 16px 64px 16px 64px;
     }
     .portfolioEntry {
-        gap: 36px;
+        gap: 32px;
+        padding-top: 32px;
     }
     /* .website,
     .portfolioEntry > p {
@@ -110,6 +112,7 @@
     }
     .portfolioEntry {
         gap: 48px;
+        padding-top: 48px;
     }
     /* .website, */
     /* .portfolioEntry > p {
