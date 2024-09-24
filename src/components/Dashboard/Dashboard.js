@@ -5,7 +5,7 @@ import { Info, Business, Portfolio, Projects, CV } from './Graphics';
 export function DashboardMobile({ setPage }) {
 
     return (
-        <div className='dashboardMobile'>
+        <div id='dashboardMobile' className='dashboardMobile'>
             <div className='row'>
                 <div className='button' onClick={() => setPage('about')}><Info/></div>
                 <div className='button' onClick={() => setPage('business')}><Business/></div>
@@ -59,11 +59,11 @@ export function DashboardDesktop({ setPage }) {
                 console.error(`wrong input value: ${page}` )
                 return
         }
-        const element = document.getElementById("main");
-        const pos = element.getBoundingClientRect().top;
-        setTimeout(() => {
-            window.scrollTo({ top: pos, behavior:'smooth' });
-        }, 100);
+        // const element = document.getElementById("main");
+        // const pos = element.getBoundingClientRect().top;
+        // setTimeout(() => {
+        //     window.scrollTo({ top: pos, behavior:'smooth' });
+        // }, 100);
     }
 
     return (

@@ -4,7 +4,7 @@ import { DashboardDesktop } from '../Dashboard/Dashboard';
 export default function Hero({ setPage }) {
 
     return (
-        <div className='hero'>
+        <div id='hero' className='hero'>
             <div className='image'>
                 <img 
                 alt='hero-art' 

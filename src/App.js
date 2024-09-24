@@ -6,23 +6,68 @@ import About from './components/About/About';
 import Businesses from './components/Businesses/Businesses';
 import Portfolio from './components/Portfolio/Portfolio';
 import Projects from './components/Projects/Projects';
-import { useState } from 'react';
+import AnimatePresence from './components/Animate/AnimatePresence';
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+function matchMinHeight(sourceElement, targetElement) {
+  const sourceHeight = sourceElement.offsetHeight;
+  targetElement.style.minHeight = `${sourceHeight}px`;
+}
+
+function scrollToMain () {
+  const element = document.getElementById("main");
+  const pos = element.getBoundingClientRect().top;
+  setTimeout(() => {
+      window.scrollTo({ top: pos, behavior:'smooth' });
+  }, 100);
+}
+
+function scrollToHeroBottom () {
+  const hero = document.getElementById('hero');
+  const offset = hero.offsetHeight;
+  setTimeout(() => {
+    window.scrollTo({ top: offset, behavior: 'smooth'})
+  }, 100)
+}
 
 function App() {
   const [page, setPage] = useState('home');
+  const [animateKey, setAnimateKey] = useState(0);
+
+  useEffect(() => {
+    const source = document.getElementById('dashboardMobile');
+    const target = document.getElementById('pageAnimator');
+    if(source) matchMinHeight(source, target);
+    window.addEventListener('resize', () => {
+      if(source) matchMinHeight(source, target);
+    });
+  },[page])
+
+  const handlePageChange = useCallback((newPage) => {
+    setAnimateKey(prev => prev + 1);
+    scrollToHeroBottom();
+    setTimeout(() => {
+      setPage(newPage);
+    }, 500);
+    // scrollToMain();
+  }, [page, setPage]);
   
   return (
     <>
-      <Hero setPage={setPage} />  
-      <main id='main' className='passion-one'>
-        {page ==='home' && <DashboardMobile setPage={setPage} />}
-        {page === 'about' && <About setPage={setPage} />}
-        {page === 'business' && <Businesses setPage={setPage} />}
-        {page === 'portfolio' && <Portfolio setPage={setPage} />}
-        {page === 'projects' && <Projects setPage={setPage} />}
+      <Hero setPage={handlePageChange} />  
+      <main id='main' className='passion-one' style={{ minHeight: '100vh' }}>
+        <AnimatePresence id='pageAnimator' key={animateKey} trigger={animateKey}>
+          {page ==='home' && <DashboardMobile setPage={handlePageChange} />}
+          {page === 'about' && <About setPage={handlePageChange} />}
+          {page === 'business' && <Businesses setPage={handlePageChange} />}
+          {page === 'portfolio' && <Portfolio setPage={handlePageChange} />}
+          {page === 'projects' && <Projects setPage={handlePageChange} />}
+        </AnimatePresence>
+      </main> 
+      <footer className='passion-one'>
         <Footer/>
         <span className='footnote'>art by Stanislaw Szukalski.</span>
-      </main> 
+      </footer>
     </>
   );
 }

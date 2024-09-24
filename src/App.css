@@ -44,14 +44,14 @@ p {
   font-weight: 400;
   font-size: 16px;
 }
-
+footer,
 main {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+footer > div,
 main > div {
   max-width: 1440px;
   padding: 0px 24px 0px 24px;
@@ -90,7 +90,7 @@ body > div {
   .footnote {
     font-size: 20px;
   }
-
+  footer > div,
   main > div {
     padding: 0 64px 0 64px;
   }
@@ -130,8 +130,9 @@ body > div {
   .footnote {
     font-size: 24px;
   }
-
+  footer > div,
   main > div {
     padding: 0 80px 0 80px;
   }
 }
+
