@@ -92,9 +92,9 @@ const PortfolioEntry = ({
             <p className={classNames('leftAlign', 'rightAlign')}>
                 <span className='label'>Role: </span>{role}
             </p>
-            <p className={classNames('leftAlign', 'rightAlign')}>
+            {/* <p className={classNames('leftAlign', 'rightAlign')}>
                 <span className='label'>Activities: </span>{activities}
-            </p>
+            </p> */}
             {note}
         </div>
     )
