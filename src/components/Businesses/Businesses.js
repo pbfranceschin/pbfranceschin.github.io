@@ -13,9 +13,9 @@ export default function Businesses({ setPage }) {
             <Venn />
             {/* soon... */}
         </div>
-        <div style={{ display: 'flex', justifyContent: 'end' , width: '100%' }}>
+        {/* <div style={{ display: 'flex', justifyContent: 'end' , width: '100%' }}>
             <BottomArrows setPage={setPage}/>
-        </div>
+        </div> */}
         </>
     )
 }
@@ -61,8 +61,8 @@ function Venn () {
             </div>
             <div className='content'>
                 {/* <div className={classNames('line', 'hiddenLg')}></div> */}
-                <p>Tech startup focused on web(3) applications, smart contract protocols, decentralized applications.</p>
-                <p><span className='label'>Role:</span> Co-founder, engineer, full-stack developer.</p>
+                <p>Software studio focused on web(3) applications, smart contract protocols, decentralized applications.</p>
+                <p><span className='label'>Role:</span> Co-owner, engineer, full-stack developer.</p>
                 <div className='website'>
                     <div className='globeIcon'>
                         <GlobeIcon/>
