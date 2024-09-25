@@ -56,7 +56,7 @@ function App() {
   return (
     <>
       <Hero setPage={handlePageChange} />  
-      <main id='main' className='passion-one' style={{ minHeight: '100vh' }}>
+      <main id='main' className='passion-one' style={{ minHeight: 'calc(100vh - 150px)' }}>
         <AnimatePresence id='pageAnimator' trigger={animateKey}>
           {page === 'home' && <DashboardMobile setPage={handlePageChange} />}
           {page === 'about' && <About setPage={handlePageChange} />}
