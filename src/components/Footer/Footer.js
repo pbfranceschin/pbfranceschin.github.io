@@ -4,10 +4,10 @@ export default function Footer() {
 
     return (
         <div className='footer'>
-            <a href='https://github.com/pbfranceschin' className='social' target='_blank'><Github/></a>
-            <a href='https://x.com/pbfranceschin' target='_blank' className='social'><X /></a>
-            <a className='social' href='https://www.linkedin.com/in/pedro-franceschin-16278015b/' target='_blank'><LinkedIn/></a>
-            <a className='social' href='https://medium.com/@pbfranceschin' target='_blank'><Medium/></a>
+            <a href='https://github.com/pbfranceschin' className='social' target='_blank' rel='noreferrer'><Github/></a>
+            <a href='https://x.com/pbfranceschin' target='_blank' rel='noreferrer' className='social'><X /></a>
+            <a className='social' href='https://www.linkedin.com/in/pedro-franceschin-16278015b/' target='_blank' rel='noreferrer'><LinkedIn/></a>
+            <a className='social' href='https://medium.com/@pbfranceschin' target='_blank' rel='noreferrer'><Medium/></a>
         </div>
     )
 }

@@ -5,10 +5,6 @@ import classNames from 'classnames';
 
 export const BottomArrows = ({ setPage }) => {
 
-    const handleBack = () => {
-        setPage('home');
-    }
-
     const handleUp = () => {
         setTimeout(() => {
             window.scrollTo({ top: 0, behavior: 'smooth' });

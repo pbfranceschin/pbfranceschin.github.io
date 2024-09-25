@@ -1,8 +1,7 @@
 import './Businesses.css';
 import Heading from '../Commom/Heading';
 import { ApeLogo, GlobeIcon, VennLogo } from '../Commom/Graphics';
-import { BottomArrows } from '../Commom/BottomArrows';
-import classNames from 'classnames';
+
 
 export default function Businesses({ setPage }) {
     
@@ -20,29 +19,29 @@ export default function Businesses({ setPage }) {
     )
 }
 
-function Australopitech () {
+// function Australopitech () {
 
-    return (
-        <div className='business'>
-            <div className='businessHeaderRight'>
-                <div className='apeLogo'>
-                    <ApeLogo/>
-                </div>
-                <div className='frameRight'>
-                    <h3>Australopitech</h3>
-                    <div className='website'>
-                        <div className='globeIcon'>
-                            <GlobeIcon/>
-                        </div>
-                        <p style={{ margin: 0 }}>australopitech.xyz</p>
-                    </div>
-                </div>
-            </div>
-            <p>Web3 development, dapp design, blockchain solutions and consulting.</p>
-            <p><span className='label'>Role:</span> Co-owner, full-stack developer, protocol designer and smart contract engineer.</p>
-        </div>
-    )
-}
+//     return (
+//         <div className='business'>
+//             <div className='businessHeaderRight'>
+//                 <div className='apeLogo'>
+//                     <ApeLogo/>
+//                 </div>
+//                 <div className='frameRight'>
+//                     <h3>Australopitech</h3>
+//                     <div className='website'>
+//                         <div className='globeIcon'>
+//                             <GlobeIcon/>
+//                         </div>
+//                         <p style={{ margin: 0 }}>australopitech.xyz</p>
+//                     </div>
+//                 </div>
+//             </div>
+//             <p>Web3 development, dapp design, blockchain solutions and consulting.</p>
+//             <p><span className='label'>Role:</span> Co-owner, full-stack developer, protocol designer and smart contract engineer.</p>
+//         </div>
+//     )
+// }
 
 function Venn () {
 

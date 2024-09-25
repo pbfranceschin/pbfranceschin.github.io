@@ -7,20 +7,20 @@ import Businesses from './components/Businesses/Businesses';
 import Portfolio from './components/Portfolio/Portfolio';
 import Projects from './components/Projects/Projects';
 import AnimatePresence from './components/Animate/AnimatePresence';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 function matchMinHeight(sourceElement, targetElement) {
   const sourceHeight = sourceElement.offsetHeight;
   targetElement.style.minHeight = `${sourceHeight}px`;
 }
 
-function scrollToMain () {
-  const element = document.getElementById("main");
-  const pos = element.getBoundingClientRect().top;
-  setTimeout(() => {
-      window.scrollTo({ top: pos, behavior:'smooth' });
-  }, 100);
-}
+// function scrollToMain () {
+//   const element = document.getElementById("main");
+//   const pos = element.getBoundingClientRect().top;
+//   setTimeout(() => {
+//       window.scrollTo({ top: pos, behavior:'smooth' });
+//   }, 100);
+// }
 
 function scrollToHeroBottom () {
   const hero = document.getElementById('hero');
