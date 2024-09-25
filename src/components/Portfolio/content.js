@@ -2,8 +2,8 @@ export const content = {
     venn: {
         name: 'venn protocol',
         website: 'https://venn-protocol.vercel.app/',
-        about: 'dapp that leverages smart contract accounts to empower users to engage in a new kind of NFT rentals market, completely free of collateral and compatible by default.',
-        role: 'dapp designer, smart contract engineer, full-stack developer, web designer.',
+        about: 'dapp that leverages smart contract accounts to empower users to engage in a new kind of NFT rentals market, completely free of collateral and compatible with dapps by default.',
+        role: 'protocol/smart contract engineer, full-stack developer, web designer.',
         activities: 'everything ranging from protocol decisions, smart contract design and testing, to the  web development side, including design and integration with the Ethereum Virtual Machine.'
     },
     desmatamento: {
