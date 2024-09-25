@@ -19,21 +19,18 @@
 
 @keyframes rollIn {
     0% {
-        translate: -100vw 0;
+        transform: translateX(-100vw);
     }
-
     100% {
-        translate: 0 0;
+        transform: translateX(0);
     }
 }
 
-
 @keyframes rollOut {
     0% {
-        translate: 0 0;
+        transform: translateX(0);
     }
-
     100% {
-        translate: 100vw 0;
+        transform: translateX(100vw);
     }
 }

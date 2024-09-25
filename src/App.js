@@ -41,23 +41,24 @@ function App() {
     window.addEventListener('resize', () => {
       if(source) matchMinHeight(source, target);
     });
-  },[page])
+  }, [page]);
 
   const handlePageChange = useCallback((newPage) => {
+    console.log('handlePageChange called with:', newPage);
     setAnimateKey(prev => prev + 1);
     scrollToHeroBottom();
     setTimeout(() => {
+      console.log('Changing page to:', newPage);
       setPage(newPage);
-    }, 500);
-    // scrollToMain();
-  }, [page, setPage]);
+    }, 300); // Reduced from 500ms to match animation duration
+  }, []);
   
   return (
     <>
       <Hero setPage={handlePageChange} />  
       <main id='main' className='passion-one' style={{ minHeight: '100vh' }}>
-        <AnimatePresence id='pageAnimator' key={animateKey} trigger={animateKey}>
-          {page ==='home' && <DashboardMobile setPage={handlePageChange} />}
+        <AnimatePresence id='pageAnimator' trigger={animateKey}>
+          {page === 'home' && <DashboardMobile setPage={handlePageChange} />}
           {page === 'about' && <About setPage={handlePageChange} />}
           {page === 'business' && <Businesses setPage={handlePageChange} />}
           {page === 'portfolio' && <Portfolio setPage={handlePageChange} />}
